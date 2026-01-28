@@ -1,4 +1,5 @@
 import { memo, startTransition, useEffect, useState } from "react"
+import Counter from "./Components/Counter";
 const Child = memo(
   function Child({ value, onClick }: { value: number; onClick: () => void })
   {
@@ -30,6 +31,7 @@ export default function App()
   return (
     <>
       <h1>Count:{count} </h1>
+      <Counter />
       <button onClick={() =>
       {
         setCount(c => c + 1);
